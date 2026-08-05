@@ -1,1 +1,81 @@
-
+"Task 
+Order"	Sys_Group	SWC	Prefix	SWDescription	SWR1.0
+1	BusCom	CIL	CIL	Input (CAN,LIN,HW,NVM,RTE) signal process (bypass, validation)	●
+2	SysCfg	DrvtrCfg	DtC	Variant configuration value, diagnostic global and local switch configuration	×
+3	ObsrEStorg	ObsrHvbat	ObHv	Observer of high voltage battery information	●
+4	ObsrEStorg	ObsrLvbat 	ObLv	Observer of low voltage battery information	●
+5	ObsrHybCpt	ObsrEltlMot	ObEM	Observer of front axle electric motor information	●
+6	ObsrHybCpt	ObsrEltlMot2	ObEM2	Observer of rear left electric motor information	●
+7	ObsrHybCpt	ObsrEltlMot3	ObEM3	Observer of rear right electric motor information	●
+8	ObsrHybCpt	ObsrObc	ObObc	Observer of on-board charging information	●
+9	ObsrHybCpt	ObsrDcdc	ObDc	Observer of DCDC information	●
+10	HMI	ObsrGearLvr	ObGL	Vehicle gear lever management and gear shifting warning feedback	●
+11	HMI	AcerPedlPosnDetmn	APPD	Acceleration pedal position calculation based on sensor position	●
+12	HMI	BrkPedlPosnDetmn	BPPD	Brake pedal position calculation and brake switch state determination	●
+13	HMI	ObsrDrvMode	ObDM	Vehicle drive mode/Creep mode/regeneration level management and shifting and Memories	●
+14	ObsrVeh	ObsrVehTqIntv	ObVTI	Observer of vehicle chassis intervention torque (TCS/ECS/EPS)	●
+15	ObsrVeh	ObsrWhlSpd	ObWS	Observer of four wheel speed	●
+16	ObsrVeh	ObsrVehMtn	ObVM	Estimate the vehicle's center of mass velocity based on IMU sensor data and vehicle dynamics	●
+17	ObsrVeh	ObsrRoadGrdt	ObRG	Estimate the road slope based on IMU sensor data	●
+18	ObsrVeh	ObsrVehM	ObVMa	Estimate the vehicle mass based on IMU sensor data and vehicle dynamics 	●
+19	ObsrVeh	ObsrTireRd	ObTR	Estimate Tire static and dynamic radius	●
+20	ObsrVeh	ObsrWhlLoa	ObWL	Estimate static and transient vehicle loads of each single wheel	●
+21	ObsrVeh	ObsrFricCoeff	ObFC	Effective Adhesion Coefficient calculation	●
+22	ObsrVeh	ObsrSideSlip	ObSS	Estimate the vehicle side slip angle	●
+23	ObsrVeh	ObsrWhlSlip	ObWSlip	Estimate the slip and rotation rates for all four wheels. 	●
+24	ObsrVeh	ObsrPrpnF	ObPF	Estimate vehicle traction and drag torque	●
+25	ObsrVeh	ObsrVehBody	ObVB	Observer of vehicle body information (Seat occupied state/Door/Lock states)	●
+26	ThermMngtInp	ObsrThermCpt	ObTC	Observer of thermal related component information (AC temperature/Pump speed)	●
+27	EltfdSysStCtl	NormOperStCdn	NOSC	Normal operation(HV on/off/charging) state condition preprocessing, prepare trigger flag for Hv on/off/charging state management SWC NormOperStMgr	●
+28	EltfdSysStCtl	NormOperStMgr	NOSM	Normal operation(HV on/off/charging) state shifting management	●
+29	EHybMgr	PwrDibtn	PD	Power distribution for high voltage components	●
+30	TqLimnPt	TqLimnDrvtr	TLDr	torque limitation calculation based on battery power limitation and e-motor torque limitation	●
+31	DynDrvtrCtl	DynDrvtrCtlLimn	DDCL	Dynamic drive train torque limitation after torque quadrant conversion	●
+32	TracTqDmdDetmn	TracTqLimn	TTL	Traction torque limitation based on motor temperature/HV battery SOC/Drive ready status	●
+33	TracTqDmdDetmn	MaxTracTqDetmn	MaTTD	Maximum reference torque calculation based on motor maximum capability curve  for acceleration torque calculation 	●
+34	TracTqDmdDetmn	MinTracTqDetmn	MiTTD	Minimum reference torque calculation based on motor minimum capability curve  for coasting torque calculation 	●
+35	TracTqDmdDetmn	AcerPedlTqDetmn	APTD	Traction torque based on acceleratino pedal position	●
+36	TracTqDmdDetmn	BrkPedlTqDetmn	BPTD	Brake regeneration torque calculation based on brake pedal position and motor torque curve	●
+37	MtnCtl	LgtCtl	LgtC	Vehicle longitudinal motion control based on ADAS request	×
+38	VehSpdCtl	VehCrpCtl	VCC	Creep request torque calculation based on vehicle target creep speed	●
+39	VehSpdCtl	VehSpdLimn	VSL	Speed limitation torque calculation based on maximum allowed vehicle speed	●
+40	TracTqDmdDetmn	TracTqCoorn	TTC	All traction torque coordination between Acceleration/brake/coasting/brake/speedlimitation/VLC torque request(Two quadrant)	●
+41	VehMtnSpclFct	AntiMtnSknsMode	AMSM	Anti-car-sickness control	○
+42	TracTqDmdDetmn	TracTqDynLimn	TTDL	Traction torque dynamic limitation and filtering	●
+43	TqDibtn	TracTqDibtnAxleReq	TTDAR	Traction torque front/rear distribution factor calculation based on the front and axle slip status and driving mode selection	●
+44	TqDibtn	TracTqDibtnAxle	TTDA	Traction torque front/rear distribution based on the distribution factor from SWC TracTqDibtnAxleReq	●
+45	ReWhlSteer	ReWhlSteerAdpvCtl	RWSAC	Rear wheel steering adaptive control, rear-wheel steering actions under speed-dependent proportional control + feedback control	●
+46	ReWhlSteer	ReWhlSteerSpclCtl	RWSSC	Rear wheel steering special control under crab walk	●
+47	ReWhlSteer	ReWhlSteerCDetmn	RWSCD	Rear wheel steering target corner determination	●
+48	DynDrvtrCtl	EltlAxleDirCoorn	EADC	Torque quadrant conversion based on gear D/R state	●
+49	DynDrvtrCtl	DynTqReqCoorr	DTRC	Torque and power limitation and transfer between front and rear axle after front rear torque split and before right and left torque split	●
+50	DynDrvtrCtl	TqVctrgCtlRefGenr	TVCRG	Torque vectoring reference yaw rate calculation based on driver intention	●
+51	DynDrvtrCtl	TqVctrgCtlFfCtlr	FVCFfC	Torque vectoring feed forward yaw rate calculation based on the normal feedforward yaw rate and the RWS correction factor	●
+52	DynDrvtrCtl	TqVctrgCtlFbCtlr	TVCFbC	Torque vectoring feedback yaw rate calculation based on the yaw rate error	●
+53	DynDrvtrCtl	TqVctrgCtlCoorn	TVCC	Torque vectoring coordination with feedforward and feedback yaw rate and the request yaw torque calculation	●
+54	DynDrvtrCtl	TqVctrgCtlLgtDibtn	TVCLgD	Yaw moment split between front and rear axle	●
+55	DynDrvtrCtl	VehMtnSteerCtl	VMSC	The yaw moment is converted into the rear steering control angle through the inverse tire dynamics model	●
+56	VehMtnSpclFct	TqVctrgCtlDriftDetmn	TVCDD	Torque vectoring drift control	○
+57	DynDrvtrCtl	TqVctrgCtlLatDibtn	TVCLaD	Rear yaw moment split between rear left and rear right axle	●
+58	VehMtnSpclFct	AllTrrnCtl	ATC	All-Terrain mode control	×
+59	VehMtnSpclFct	TqVctrgCtrlFlatTireStaby	TVCFTS	Tire blowout pre-stability control	○
+60	VehMtnSpclFct	DrvtrStmac	DSm	Tank steering state management	○
+61	VehMtnSpclFct	TankSteerCtl	TkSC	Tank steering torque calculation	○
+62	VehMtnRdndFct	TqVctrgCtlRdndDrv	TVCRD	Torque vectoring redundant drive under motor failure	○
+63	DynDrvtrCtl	DrvtrInvCtlr	DIC	VMC torque coordination between multiple VMC functions (Torque vectoring/Blowout pre-stability control/Drift control/Tank steering/Sliding park)	●
+64	WhlSlipCtlr	WhlSlipCtlrElecWhl1	WSCEW1	Slip rate calculation for front axle and torque limitation to prevent front axle slip	○
+65	WhlSlipCtlr	WhlSlipCtlrElecWhl2	WSCEW2	Slip rate calculation for rear left wheel and torque limitation to prevent rear left wheel slip	○
+66	WhlSlipCtlr	WhlSlipCtlrElecWhl3	WSCEW3	Slip rate calculation for rear right wheel and torque limitation to prevent rear right wheel slip	○
+67	DynDrvtrCtl	TqVctrgTqCorrn	TVTC	Torque coordination with chassis TCS and VMC wheel split control torque intervention under allowed maximum yaw torque tolerance	●
+68	DynDrvtrCtl	VehMtnMdlFf	VMMF	Torque vectoring correction factor calculation based on vehicle actual motion	●
+69	DynDrvtrCtl	SurgeDampgEltlAxle	SDEA	Drivability torque filtering for each motor request torque (Zero crossing/Drivability)	●
+70	DynDrvtrCtl	AjerkEm	AjE	Anti-jerk activation for e-motor	●
+71	DynDrvtrCtl	FinalTqReqEm	FTRE	Transfer wheel level torque into motor level torque based on the gear ratio	●
+72	EltfdSysStCtl	StMgrObc	SMObc	On-board charging state management	×
+73	CtlAux	CtlEltlAuxDcdc	CEAD	DCDC state management(Enable/Disable/Allowed power limitation)	●
+74	ChComStCtl	ElecVehChrgnStHdlr	EVCSH	Electric vehicle charge state management (DC charging)	●
+75	ThermMngtCtlr	CtlThermCpt	CTCp	Thermal component control	×
+76	PassInfoAndCom	VehAvlDrvgRng	VADR	Vehicle available driving range calculation based on real time HV components' power consumption	×
+77	BrkSys	BrkLiAcvnDetmn	BLAD	Brake light activation determination based on regeneration torque value	×
+78	PassInfoAndCom	DispSig	DS	Display signal calculation especially for MHU preparation	×
+79	BusCom	COL	COL	Output (CAN,LIN,HW,NVM,RTE) signal process (bypass, validation)	●
